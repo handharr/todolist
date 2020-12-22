@@ -33,7 +33,13 @@ const Home = () => {
         <div className={styles.wrapper}>
           <h1 className={styles.wrapperHeader}>Here's your plans!</h1>
           <TodoInput />
-          <Todo todos={todos.filter((val) => val.status === 0)} />
+          <Todo
+            todos={todos
+              .filter((val) => val.status === 0)
+              .sort((a, b) =>
+                Date.parse(a.createdAt) > Date.parse(b.createdAt) ? 1 : -1
+              )}
+          />
         </div>
         <div className={styles.action}>
           <Button
@@ -51,7 +57,13 @@ const Home = () => {
         </div>
         <div className={styles.wrapper}>
           <h1 className={styles.wrapperHeader}>Yayy you have done this!!</h1>
-          <Todo todos={todos.filter((val) => val.status === 1)} />
+          <Todo
+            todos={todos
+              .filter((val) => val.status === 1)
+              .sort((a, b) =>
+                Date.parse(a.createdAt) > Date.parse(b.createdAt) ? -1 : 1
+              )}
+          />
         </div>
       </div>
     </div>
