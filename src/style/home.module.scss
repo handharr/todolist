@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #219ebc;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+  gap: 30px;
+
+  .content {
+    display: flex;
+    gap: 10px;
+
+    .action {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+      justify-content: center;
+      gap: 25px;
+
+      .iconButton {
+        background-color: transparent !important;
+        border: none !important;
+      }
+    }
+    .wrapper {
+      width: 500px;
+      min-height: 400px;
+      background-color: #22223b;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+      padding: 10px;
+
+      .wrapperHeader {
+        color: white;
+      }
+    }
+  }
+}
